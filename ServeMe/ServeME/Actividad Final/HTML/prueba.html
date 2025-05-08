@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>ServeMe</title>
+    <style>
+        .navo{
+            background-color: #12372A;
+        }
+        .oscuro{
+            background-color: rgba(0,0,0,0.9); z-index: 1;
+            min-height: 200px;
+        }
+        .boton-nav:hover{
+            font-size: large;
+            color: #12372A;
+            
+        }
+        .espacio{
+            width: 100%;
+            height: 300px;
+        }
+        .slide{
+            background-image: url(https://media.cdn.puntobiz.com.ar/052024/1715019505016.webp?cw=807&ch=454&extw=jpg);
+            min-height: 200px
+        }
+        .menu{
+            min-height: 100px;
+        }
+        .fondito{
+            background-color: #12372A;
+        }
+        .menusito{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body class="fondito">
+    <!-- MAS O MENOS BIEN -->
+    <header>
+        <nav class="navbar fixed-bottom text-white bg-dark   ">
+            <div class="container-fluid d-flex justify-content-between ">
+                <div class="text-center boton-nav ">
+                    <i class="bi bi-house fs-2"></i>
+                    <p class="fs-6"><Strong>inicio</Strong></p>
+                </div>
+                <div class="text-center boton-nav">
+                    <i class="bi bi-clipboard2 fs-2"></i>
+                    <p class="fs-6"><strong>orden</strong></p>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid navo ">
+            <div class="row justify-content-between align-items-center ">
+                <div class="col-3">
+                    <img src="../IMG/iconazo.png" alt="" width="100%">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-light border-3 border-li border-black text-black"><STRONg>LLAMAR AL MOZO</STRONg></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+    <main>
+        <!----------------------------- 2 SECCION --------------------------------------------------------------->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="oscuro">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner p-2">
+                     
+                          <div class="carousel-item active">
+                            <div class="d-flex text-center">
+                                <img class="rounded border border-3" src="https://www.beloleum.com/wp-content/uploads/2023/11/hamburguesas-caseras-gourmet.png" alt="" width="50%">
+                                <div class="m-2">
+                                    <H1 class="text-light"><STRONg>MENU DEL DIA</STRONg></H1> 
+                                    <h2 class="text-light"><strong>$8000</strong></h2>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="d-flex text-center">
+                                    <img class="rounded border border-3" src="https://okdiario.com/img/recetas/2016/09/22/cocteles-tequila.jpg" alt=""  width="50%"">
+                                    <div class="m-2">
+                                        <H1 class="text-light"><STRONg>HAPPY HOUR</STRONg></H1>
+                                        <h2 class="text-light"><strong>$8000</strong></h2>
+                                    </div>
+                                    
+                                </div>
+
+                          </div>
+                            <div class="carousel-item ">
+                                <div class="d-flex text-center">
+                                    <img class="rounded border border-3" src="https://i.ytimg.com/vi/jYUEsMN2MG8/maxresdefault.jpg" alt="" width="50%">
+                                    <div class="m-2">
+                                        <H1 class="text-light" ><STRONg>ESPECIALIDAD DE LA CASA</STRONg></H1>
+                                        <h2 class="text-light"><strong>$9000</strong></h2>
+                                    </div>
+                                </div>  
+                  </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div>
+        <!----------------------------- FIN 2 SECCION --------------------------------------------------------------->
+        <!----------------------------- 3 SECCION --------------------------------------------------------------->
+
+        
+        <div class=" container-fluid  menu d-flex text-center align-items-center py-5 my-2">
+            
+                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+    
+        </div>
+        <!----------------------------- FIN 3 SECCION --------------------------------------------------------------->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="card border-3 border-light bg-dark mb-4" >
+                        <div class="d-flex text-center">
+                            
+                            <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
+                            <div class="p-2 text-center">
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star text-light"></i>  
+                                <i class=" bi bi-star text-light"></i>  
+                                <h5 class="text-light">ANVORGUESA ESTE</H5>
+                                <h6 class="text-light"><strong>$20000</strong></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-3 border-light bg-dark mb-4" >
+                        <div class="d-flex text-center">
+                            
+                            <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
+                            <div class="p-2 text-center">
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star text-light"></i>  
+                                <i class=" bi bi-star text-light"></i>  
+                                <h5 class="text-light">ANVORGUESA ESTE</H5>
+                                <h6 class="text-light"><strong>$20000</strong></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-3 border-light bg-dark mb-4" >
+                        <div class="d-flex text-center">
+                            
+                            <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
+                            <div class="p-2 text-center">
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star text-light"></i>  
+                                <i class=" bi bi-star text-light"></i>  
+                                <h5 class="text-light">ANVORGUESA ESTE</H5>
+                                <h6 class="text-light"><strong>$20000</strong></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-3 border-light bg-dark mb-4" >
+                        <div class="d-flex text-center">
+                            
+                            <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
+                            <div class="p-2 text-center">
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star text-light"></i>  
+                                <i class=" bi bi-star text-light"></i>  
+                                <h5 class="text-light">ANVORGUESA ESTE</H5>
+                                <h6 class="text-light"><strong>$20000</strong></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-3 border-light bg-dark mb-4" >
+                        <div class="d-flex text-center">
+                            
+                            <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
+                            <div class="p-2 text-center">
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star-fill text-light"></i>
+                                <i class=" bi bi-star text-light"></i>  
+                                <i class=" bi bi-star text-light"></i>  
+                                <h5 class="text-light">ANVORGUESA ESTE</H5>
+                                <h6 class="text-light"><strong>$20000</strong></h6>
+                            </div>
+                        </div>
+                    </div>
+
+ 
+               
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../js/tienda.js"></script>
+</body>
+</html>
