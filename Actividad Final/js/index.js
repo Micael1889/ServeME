@@ -49,30 +49,42 @@ const menu = [
     },
   ];
   
+  const cat= []
   const lista = document.querySelector(".list-prod")
   const categorias = document.querySelector(".contenedor-categorias")
 
+  for(let x = 0;x < menu.length; x++){
+    if(!cat.includes(menu[x].categoria)){
+      cat.push(menu[x].categoria)
+    }
+  }
+
+    for(let x = 0; x<cat.length;x++){
+      let tituloCat = document.createElement("h1")
+      tituloCat.textContent = cat[x]
+      lista.appendChild(tituloCat)
+        for(let y = 0; y < menu.length; y++){
+        if(cat[x] == menu[y].categoria){
+                  let divProd = document.createElement("div")
+        divProd.className = "item"
+        divProd.innerHTML = 
+        `<div class="info-imp">
+        <h3>${menu[y].nombre}</h3>
+        <br>
+        <p class="precio">$<span >${menu[y].precio}</span></p>
+        </div>
+        <img src="${menu[y].src}" alt="" width="40%">
+       `;
+       lista.appendChild(divProd)
+        } }
+
+
+    }
     for(let x = 0; x < menu.length;x++){
         let catProd = document.createElement("div")
         catProd.className = "categoria"
         catProd.innerHTML = `<h4 class="titulo-cat"><strong>${menu[x].categoria}</strong></h4>`;
-        categorias.appendChild(catProd)
-    }
-
-    for(let x = 0; x < menu.length; x++){
-        let divProd = document.createElement("div")
-        divProd.className = "item"
-        divProd.innerHTML = 
-        `<img src="${menu[x].src}" alt="" width="40%"> 
-        <div class="info-imp">
-        <h3>${menu[x].nombre}</h3>
-        <br>
-        <p class="precio">$<span >${menu[x].precio}</span></p>
-        </div>
-        
-       `;
-       lista.appendChild(divProd)
-       }
+        categorias.appendChild(catProd)}
 
        const botonBebidas = document.getElementById("bebidas");
        const botonPostres = document.getElementById("postres");

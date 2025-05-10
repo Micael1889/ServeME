@@ -31,7 +31,7 @@ nav.nav-superior {
 .contenedor-avisos {
   display: flex;
   justify-content: space-around;
-  background-color: #1b0303;
+  background-color: #eb984e;
   text-align: center;
 }
 
@@ -48,6 +48,7 @@ nav.nav-superior {
   align-items: center;
   animation: entrada;
   animation-duration: 3s;
+  
 }
 
 @keyframes entrada {
@@ -62,14 +63,21 @@ nav.nav-superior {
 .img-aviso {
   animation: move;
   animation-duration: 3s;
+  animation-direction: reverse;
 }
 
 @keyframes move {
-  from {
+   from {
     transform: translateX(250px);
   }
-  to {
+  {
     transform: translateX(0px);
+  }
+   {
+    transform: translateX(0px);
+  }
+  {
+    transform: translateX(250px);
   }
 }
 
@@ -79,12 +87,12 @@ nav.nav-superior {
   bottom: 100%;
 }
 
-.desplazamiento {
+/* .desplazamiento {
   width: 20px;
   height: 20px;
   border-radius: 100%;
   background-color: rgb(10, 98, 176);
-}
+} */
 
 .contenedor-categorias {
   box-shadow: 0px 50px 100px #dbd5d5;
@@ -152,15 +160,27 @@ h2 {
 }
 
 .info-imp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin: 0% 5% 0% 0%;
   text-align: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .precio {
-  color: aquamarine;
+  background-color: rgb(104, 76, 7);
+  width: 50%;
+  box-shadow:  0px 0px 10px rgb(104, 76, 7);
+  border-radius: 0.325rem;
   font-weight: bolder;
   font-size: large;
+  color: rgb(255, 255, 255);
+}
+
+span{
+  color: rgb(255, 255, 255);
 }
 
 img {
