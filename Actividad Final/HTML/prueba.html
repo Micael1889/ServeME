@@ -35,8 +35,17 @@
         .fondito{
             background-color: #12372A;
         }
-        .menusito{
-            background-color: aquamarine;
+        .botonAgregar{
+            background-color: #12372A;
+            border: 1px solid #fff;
+            border-radius: .375rem;
+            margin: 10px;
+            width: 50px;
+        }
+        .botonAgregar:hover{
+            border: solid 3px black;
+            background-color: #155b42;
+        
         }
     </style>
 </head>
@@ -130,9 +139,10 @@
         <!----------------------------- 3 SECCION --------------------------------------------------------------->
 
         
-        <div class=" container-fluid  menu d-flex text-center align-items-center py-5 my-2">
-            
-                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+    
+            </a> 
+
+                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><img src="../IMG/porcion-de-pizza.png" alt=""></button>
                 <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
                 <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
     
@@ -140,8 +150,8 @@
         <!----------------------------- FIN 3 SECCION --------------------------------------------------------------->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 text-center">
-                    <div class="card border-3 border-light bg-dark mb-4" >
+                <div class="col-sm-12 text-center ">
+                    <div class="card border-3 border-light bg-dark mb-4 visually-hidden" >
                         <div class="producto d-flex text-center justify-content-between">
                             <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
                             <div class="p-2 text-center">
@@ -157,6 +167,9 @@
                                 </div>
                                 
                             </div>
+                            <div class="align-items-center">
+
+                            </div>
                             <button class="bg-success rounded border border-3 m-4" onclick="alertaMozo('articulo agregado'),suma_Prod()"><i class="bi bi-plus fs-1"></i></button>    
                         </div>
                         <div class="accordion-item bg-secondary">
@@ -169,7 +182,7 @@
                           </div>
                     </div>
                     
-                    <div class="card border-3 border-light bg-dark mb-4" >
+                    <div class="card border-3 border-light bg-dark mb-4 visually-hidden" >
                         <div class="d-flex text-center">
                             
                             <img src="../IMG/producto.jpg" class="rounded-start"  alt="..." width="150px">
@@ -194,22 +207,70 @@
                             </div>
                           </div>
                     </div>
+                     <!-- PRODUCTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-------------------------------- -->
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                          <div class="card h-100 rounded">
+                          <div class="card bg-dark">
                             <img src="../IMG/cocteles-y-tragos-con-whisky.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">whisky</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="card-body p-0 ">
+                              <h5 class="card-title fs-3 text-success"><STRong>WHISKY</STRong></h5>
+                              <div class="d-flex justify-content-center ">
+                                <h6 class="fs-3 text-success">$</h6>
+                                <h6 class="fs-3 cant_dinero text-success"><strong>20000</strong></h6>
+                              </div>
                             </div>
+                            
+                            <div class="align-items-center">
+                                 <button class="botonAgregar rounded rounded-5   m-4" onclick="alertaMozo('articulo agregado'),suma_Prod()"><i class="bi bi-plus fs-1"></i></button>
+                            </div>
+                            
+                            <p class="m-0">
+                                <button class=" btn btn-secondary w-100 m-0 bg-success text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                 <strong>DESCRIPCION</strong> 
+                                </button>
+                            </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body bg-dark text-success">
+                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, provident consectetur? Optio non tempora, magnam aliquid officiis nisi totam doloribus molestiae. Corporis iure totam amet! Eius non autem placeat nemo.
+                                </div>
+                              </div>  
                           </div>
+                          <!-- fin PRODUCTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-------------------------------- -->
+                          <div class="row row-cols-1 row-cols-md-3 g-4 m-2">
+                            <div class="col">
+                              <div class="card bg-dark w-100">
+                                <img src="https://revistacitylife.com/wp-content/uploads/2023/04/MEZCALINA-CON-FRUTOS-ROJOS.jpg" class="card-img-top" alt="...">
+                                <div class="card-body p-0 ">
+                                  <h5 class="card-title fs-3 text-success"><STRong>Vodka furtos rojos</STRong></h5>
+                                  <div class="d-flex justify-content-center ">
+                                    <h6 class="fs-3 text-success">$</h6>
+                                    <h6 class="fs-3 cant_dinero text-success"><strong>20000</strong></h6>
+                                  </div>
+                                </div>
+                                     <button class="bg-success rounded-5 d-flex justify-content-center  m-4" onclick="alertaMozo('articulo agregado'),suma_Prod()"><i class="bi bi-plus fs-1"></i> <H2>Agregar</H2></button>
+                                
+                                <p class="m-0">
+                                    <button class=" btn btn-secondary w-100 m-0 bg-success text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                     <strong>DESCRIPCION</strong> 
+                                    </button>
+                                </p>
+                                  <div class="collapse" id="collapseExample">
+                                    <div class="card card-body bg-dark text-success">
+                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, provident consectetur? Optio non tempora, magnam aliquid officiis nisi totam doloribus molestiae. Corporis iure totam amet! Eius non autem placeat nemo.
+                                    </div>
+                                  </div>  
+                              </div>
                         </div>
-                        <div class="col">
-                          <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a short card.</p>
+                        <div class="col ">
+                          <div class="card h-100 align-items-center">
+                                <img src="../IMG/cocteles-y-tragos-con-whisky.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <button class=" fs-1 bg-light rounded-5 border-2 position-absolute"><i class=" bi bi-plus fs-1"></i></i></button>
+                                <h5 class="card-title fs-3 "><STRong>WHISKY</STRong></h5>
+                                <div class="d-flex justify-content-center ">
+                                  <h6 class="fs-3">$</h6>
+                                  <h6 class="fs-3 cant_dinero"><strong>20000</strong></h6>
+                                </div>
                             </div>
                           </div>
                         </div>
