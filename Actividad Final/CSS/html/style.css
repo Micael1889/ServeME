@@ -15,16 +15,21 @@ nav.nav-superior {
   align-items: center;
   background-color: rgb(0, 0, 0);
   padding: 2px;
+  min-width: 100vw;
 }
 
-.llamado {
-  background-color: #000000;
+p {
+  font-size: small;
+}
+
+.boton {
+  background-color: #2d2c2c;
   box-shadow: 0px 0px 10px #dbd5d5;
   border: 3px solid rgb(104, 76, 7);
   border-radius: 10%;
   cursor: pointer;
   width: 100px;
-  height: 50%;
+  height: 50px;
   font-size: medium;
 }
 
@@ -33,12 +38,7 @@ nav.nav-superior {
   justify-content: space-around;
   background-color: #eb984e;
   text-align: center;
-}
-
-.mas-info {
-  width: 100px;
-  height: 20px;
-  border-radius: 15%;
+  min-width: 100vw;
 }
 
 .descripcion-aviso {
@@ -47,37 +47,41 @@ nav.nav-superior {
   justify-content: space-around;
   align-items: center;
   animation: entrada;
-  animation-duration: 3s;
-  
+  animation-duration: 6s;
 }
 
 @keyframes entrada {
-  from {
-    transform: translateX(-50%);
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
   }
-  to {
+  50% {
     transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150%);
+    opacity: 0;
   }
 }
 
 .img-aviso {
   animation: move;
-  animation-duration: 3s;
-  animation-direction: reverse;
+  animation-duration: 6s;
 }
 
 @keyframes move {
-   from {
+  0% {
     transform: translateX(250px);
+    opacity: 0;
   }
-  {
+  50% {
     transform: translateX(0px);
+    opacity: 1;
   }
-   {
-    transform: translateX(0px);
-  }
-  {
+  100% {
     transform: translateX(250px);
+    opacity: 0;
   }
 }
 
@@ -87,15 +91,8 @@ nav.nav-superior {
   bottom: 100%;
 }
 
-/* .desplazamiento {
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: rgb(10, 98, 176);
-} */
-
 .contenedor-categorias {
-  box-shadow: 0px 50px 100px #dbd5d5;
+  box-shadow: 0px 5px 10px #4e4040;
   padding: 2%;
   display: flex;
   justify-content: space-evenly;
@@ -108,24 +105,25 @@ nav.nav-superior {
 .categoria {
   text-align: center;
   font-size: 15px;
-  border: 3px solid rgb(104, 76, 7);
-  border-radius: 10%;
+  background-color: #e2dcdc;
+  border-radius: 1rem;
   padding: 1%;
 }
 
 .categoria:hover,
-.llamado:hover {
-  background-color: #5c5353;
+.boton:hover {
+  background-color: #cdc8c8;
 }
 
-.categoria::after,
-.llamado:after {
+.categoria:after,
+.boton:after {
   background-color: #5c5353;
 }
 
 .categoria:active,
-.llamado:active {
-  box-shadow: inset 0px 0px 25px #dbd5d5;
+.boton:active {
+  background-color: #cdc8c8;
+  animation-duration: 10ms;
 }
 
 .titulo-cat {
@@ -147,7 +145,7 @@ nav.nav-superior {
   border-radius: 10px;
   justify-content: space-between;
   width: 100%;
-  height: 150px;
+  height: 190px;
   margin-bottom: 5%;
 }
 
@@ -172,14 +170,14 @@ h2 {
 .precio {
   background-color: rgb(104, 76, 7);
   width: 50%;
-  box-shadow:  0px 0px 10px rgb(104, 76, 7);
+  box-shadow: 0px 0px 10px rgb(104, 76, 7);
   border-radius: 0.325rem;
   font-weight: bolder;
   font-size: large;
   color: rgb(255, 255, 255);
 }
 
-span{
+span {
   color: rgb(255, 255, 255);
 }
 
@@ -201,5 +199,40 @@ img {
   width: 100%;
 }
 
-nav > div {
+#cant {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+}
+/* ------------------------ HTML PANEL ------------------------------------  */
+
+.headerCont {
+  background-color: #262626;
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.divCont {
+  width: 200px;
+  height: 25px;
+  padding: 10px;
+  border: inset 5px;
+  background-color: #099bae;
+  text-align: center;
+  margin: 20px;
+}
+
+.divPrueba {
+  padding: 13%;
+}
+
+a {
+  text-decoration: none;
 }

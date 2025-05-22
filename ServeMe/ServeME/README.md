@@ -1,2 +1,0 @@
-esta es la (probablemente no) mejor pagina para que tu empresa funcione perfecto sin la necesidad de contratar seres humanos (probablemente inutiles) que piensen por si mismos (lo dudo) y tengan el libre albedrio de robar tus ganancias.
-Entonces esta es la solucion, con solo una pagina y una comision (bastante importante) (50% de las ganancias para arriba) muy amigable, podras hacer funcionar tu negocio y evitar demandas.

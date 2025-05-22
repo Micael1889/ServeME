@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../CSS/html/style.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home_app_logo" />
-    <title>ServeMe</title>
+   <title>ServeMe</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -13,21 +12,22 @@
         <!-- NAV SUPERIOR -->
         <nav class="nav-superior">
             <img src="../IMG/iconazo.png" alt="" width="10%">
-            <button class="llamado">LLAMAR AL MOZO</button>
+            <button class="llamado boton">LLAMAR AL MOZO</button>
         </nav>
     </header>
     <aside>
         <!-- NAV INFERIOR -->
         <nav class="nav-inferior">   
             <div>
-                <span class="material-symbols-outlined">home_app_logo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"/></svg>
+                <p id="cant"></p>
                 <p>orden</p>   
             </div> 
             <div>
-                <h2>0</h2>
+                <h2 id="montoTotal"></h2>
             </div>
             <div>
-                <span class="material-symbols-outlined">home_app_logo</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
                 <p>inicio</p>
             </div>
         </nav>
@@ -35,12 +35,7 @@
     <main>
     <section class="contenedor-avisos">
        
-    <div class="descripcion-aviso">
-    <h1>MENU DEL DIA</h1>
-    <p>big mac</p>
-    <button class="mas-info">MAS INFO</button>
-    </div>
-    <img class="img-aviso" src="../IMG/pngwing.com.png" alt="" width="250PX">
+
     </section>
     <section class="contenedor-categorias"> 
     </section> 
