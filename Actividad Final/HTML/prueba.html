@@ -9,142 +9,36 @@
     <title>ServeMe</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        .navo{
-            background-color: #12372A;
-        }
-        .oscuro{
-            background-color: rgba(0,0,0,0.9); z-index: 1;
-            min-height: 200px;
-        }
-        .boton-nav:hover{
-            font-size: large;
-            color: #12372A;
-            
-        }
-        .espacio{
-            width: 100%;
-            height: 300px;
-        }
-        .slide{
-            background-image: url(https://media.cdn.puntobiz.com.ar/052024/1715019505016.webp?cw=807&ch=454&extw=jpg);
-            min-height: 200px
-        }
-        .menu{
-            min-height: 100px;
-        }
-        .fondito{
-            background-color: #12372A;
-        }
-        .botonAgregar{
-            background-color: #12372A;
-            border: 1px solid #fff;
-            border-radius: .375rem;
-            margin: 10px;
-            width: 50px;
-        }
-        .botonAgregar:hover{
-            border: solid 3px black;
-            background-color: #155b42;
-        
-        }
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  anchor-name: --carousel;
+
+  > .carousel__slide {
+    scroll-snap-align: center;
+  }
+}
+
+
     </style>
 </head>
 <body class="fondito">
-    <!-- MAS O MENOS BIEN -->
-    <header>
-        <nav class="navbar fixed-bottom text-white bg-dark   ">
-            <div class="container-fluid d-flex justify-content-between ">
-                <div class="text-center boton-nav d-flex">
-                    <div>
-                        <i class="bi bi-clipboard2 fs-2"></i>
-                        <p class="fs-6"><strong>orden</strong></p>
-                    </div>
-                    <div>
-                        <p class="cant_prod bg-success rounded-5 p-1 ">0</p>
-                    </div>
-                </div>
-                <div class="border rounded p-2 bg-success text-center">
-                    <h2 class="botonito"><strong>0</strong></h2>
-                </div>
-                <div class="text-center boton-nav ">
-                    <i class="bi bi-house fs-2"></i>
-                    <p class="fs-6"><Strong>inicio</Strong></p>
-                </div>
-            </div>
-        </nav>
-        <div class="container-fluid navo ">
-            <div class="row justify-content-between align-items-center ">
-                <div class="col-3">
-                    <img src="../IMG/iconazo.png" alt="" width="100%">
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-light border-3 border-li border-black text-black" onclick="alertaMozo('Hemos dado aviso al mozo aguarde unos minutos....')"><STRONg>LLAMAR AL MOZO</STRONg></button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ------------------------------------------------------------------------------------------------------- -->
-    <main>
-        <!----------------------------- 2 SECCION --------------------------------------------------------------->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="oscuro">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner p-2">
-                     
-                          <div class="carousel-item active">
-                            <div class="d-flex text-center">
-                                <img class="rounded border border-3" src="https://www.beloleum.com/wp-content/uploads/2023/11/hamburguesas-caseras-gourmet.png" alt="" width="50%">
-                                <div class="m-2">
-                                    <H1 class="text-light"><STRONg>MENU DEL DIA</STRONg></H1> 
-                                    <h2 class="text-light"><strong>$8000</strong></h2>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="carousel-item ">
-                                <div class="d-flex text-center">
-                                    <img class="rounded border border-3" src="https://okdiario.com/img/recetas/2016/09/22/cocteles-tequila.jpg" alt=""  width="50%"">
-                                    <div class="m-2">
-                                        <H1 class="text-light"><STRONg>HAPPY HOUR</STRONg></H1>
-                                        <h2 class="text-light"><strong>$8000</strong></h2>
-                                    </div>
-                                    
-                                </div>
-
-                          </div>
-                            <div class="carousel-item ">
-                                <div class="d-flex text-center">
-                                    <img class="rounded border border-3" src="https://i.ytimg.com/vi/jYUEsMN2MG8/maxresdefault.jpg" alt="" width="50%">
-                                    <div class="m-2">
-                                        <H1 class="text-light" ><STRONg>ESPECIALIDAD DE LA CASA</STRONg></H1>
-                                        <h2 class="text-light"><strong>$9000</strong></h2>
-                                    </div>
-                                </div>  
-                  </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-            </div>
-        <!----------------------------- FIN 2 SECCION --------------------------------------------------------------->
         <!----------------------------- 3 SECCION --------------------------------------------------------------->
-
-        
-    
-            </a> 
-
-                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><img src="../IMG/porcion-de-pizza.png" alt=""></button>
-                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
-                <button class="tocame  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+<ol class="carousel">
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><img src="../IMG/porcion-de-pizza.png" alt="" width="20px"></button></li>
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button></li>
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+     <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><img src="../IMG/porcion-de-pizza.png" alt="" width="20px"></button></li>
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button></li>
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+     <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><img src="../IMG/porcion-de-pizza.png" alt="" width="20px"></button></li>
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button></li>
+  <li><button class="  text-light   rounded bg-dark fs-1 p-4 m-5"><i class="bi bi-cup-straw"></i></button>
+</li>
+</ol>         
     
         </div>
         <!----------------------------- FIN 3 SECCION --------------------------------------------------------------->

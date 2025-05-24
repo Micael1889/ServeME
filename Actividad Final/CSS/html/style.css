@@ -1,3 +1,6 @@
+:root {
+  --color-fondo-claro: #ece1d8;
+}
 * {
   padding: 0%;
   margin: 0%;
@@ -9,16 +12,45 @@ main {
   width: auto;
   height: auto;
 }
-nav.nav-superior {
+
+.nav-superior {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: rgb(0, 0, 0);
   padding: 2px;
   min-width: 100vw;
 }
 
-p {
+.divIcono {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.imgIcono {
+  border-radius: 100%;
+}
+
+.llamado {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.llamado:hover {
+  animation: moverSuave 200ms linear infinite alternate; /* Añadimos 'alternate' para un bucle suave */
+}
+
+@keyframes moverSuave {
+  0% {
+    transform: translateX(-5px); /* Empieza un poco a la izquierda */
+  }
+  100% {
+    transform: translateX(5px); /* Se mueve a la derecha */
+  }
+}
+
+.desc {
   font-size: small;
 }
 
@@ -36,7 +68,7 @@ p {
 .contenedor-avisos {
   display: flex;
   justify-content: space-around;
-  background-color: #eb984e;
+  background-color: var(--color-fondo-claro);
   text-align: center;
   min-width: 100vw;
 }
@@ -46,45 +78,72 @@ p {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  animation: entrada;
-  animation-duration: 6s;
-}
-
-@keyframes entrada {
-  0% {
-    transform: translateX(-150%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-150%);
-    opacity: 0;
-  }
 }
 
 .img-aviso {
-  animation: move;
-  animation-duration: 6s;
 }
 
-@keyframes move {
-  0% {
-    transform: translateX(250px);
+.desc-entrando,
+.list-entrando {
+  animation: entradaDesc 1s ease-out forwards;
+}
+
+.desc-saliendo {
+  animation: salidaDesc 1s forwards;
+}
+
+.img-entrando {
+  animation: entradaAviso 1s ease-out forwards;
+}
+
+.img-saliendo,
+.list-saliendo {
+  animation: salidaAviso 1s forwards;
+}
+
+@keyframes entradaDesc {
+  from {
+    transform: translateX(-150%);
     opacity: 0;
   }
-  50% {
-    transform: translateX(0px);
+  to {
+    transform: translateX(0%);
     opacity: 1;
   }
-  100% {
-    transform: translateX(250px);
+}
+
+@keyframes salidaDesc {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-150%);
     opacity: 0;
   }
 }
 
+@keyframes entradaAviso {
+  from {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes salidaAviso {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+}
 .botones-desp {
   display: flex;
   justify-content: space-evenly;
@@ -99,7 +158,7 @@ p {
   border-top: solid rgb(104, 76, 7);
   border-bottom: solid rgb(104, 76, 7);
   margin-bottom: 5%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .categoria {
@@ -140,8 +199,7 @@ p {
 .item {
   display: flex;
   cursor: pointer;
-  box-shadow: 0px 0px 10px #000000;
-  border: 2px solid rgb(224, 220, 210);
+  border: 2px solid rgb(192, 192, 192);
   border-radius: 10px;
   justify-content: space-between;
   width: 100%;
@@ -149,6 +207,10 @@ p {
   margin-bottom: 5%;
 }
 
+.item:hover {
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 10px;
+}
 .item:active {
   box-shadow: inset 0px 0px 10px #000000;
 }
@@ -201,9 +263,12 @@ img {
 
 #cant {
   position: absolute;
-  top: 10%;
-  left: 6%;
+  top: 5px;
+  left: 5px;
+  background-color: red;
+  border-radius: 50%;
 }
+
 /* ------------------------ HTML PANEL ------------------------------------  */
 
 .headerCont {
