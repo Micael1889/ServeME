@@ -1,0 +1,301 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-primary: #000;
+    --color-dark: #1B1B1D;
+}
+
+img{
+    height: 35px;
+    width: 35px;
+}
+
+.navBar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    padding: 15px 10px;
+    z-index: 99;
+    transition: all .5s;
+}
+
+.navBar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.container {
+    position: relative;
+    background-color: #E4E9F7;
+    min-width: 100vh;
+    top: 0;
+    left: 70px;
+    width: calc(100% - 70px);
+    transition: all .5s;
+    z-index: 2;
+}
+
+.container h1 {
+    display: inline-block;
+    margin: 18px;
+}
+
+.logoCont {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.logoCont .nombreLogo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.logoCont #despBoton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+/* Elementod del menu */
+
+.navCont {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.navCont li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+/* Tooltip */
+
+.toolTip {
+    position: absolute;
+    top: -20px;
+    left:  calc(100% + 20px);
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0s;
+}
+
+.navCont li:hover .toolTip {
+   opacity: 1;
+   top: 50%;
+   transform: translateY(-50%);
+   transition: all .4s;
+}
+
+.navCont li.buscar {
+    display: flex;
+    justify-content: center;
+}
+
+.navCont input {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    background: var(--color-dark);
+    transition: all .5s ease;
+}
+
+.navCont input::placeholder {
+    color: #fff;
+}
+
+.navCont .bx-search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--color-dark);
+    color: #fff;
+}
+
+.navCont .bx-search:hover {
+    background: #fff;
+    color: #11101d;
+}
+
+/* Enlaces del menu */
+
+.navCont li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all .4s ease;
+    background: var(--color-primary);
+}
+
+.navCont li a:hover {
+    background: #fff;
+}
+
+.navCont li a .links {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .4s;
+}
+
+.navCont li a:hover .links,
+.navCont li a:hover i {
+    color: #000;
+    transition: all .5s;
+}
+
+.navCont li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+/* Estilos del usuario */
+
+.usuario {
+    display: flex;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    padding: 10px 4px;
+    background: var(--color-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.usuario .usuarioCont{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.usuario #salir {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform:  translateY(-50%);
+    background: var(--color-dark);
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0;
+    transition: all .5s;
+}
+
+.usuario #salir:hover {
+    background: #fff;
+    color: #000;
+}
+
+.navBar.open {
+    width: 250px;
+}
+
+.navBar.open ~ .container{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* Logo container */
+
+.navBar.open .logoCont .nombreLogo{
+    opacity: 1;
+}
+
+.navBar.open .logoCont #despBoton {
+    right: 0;
+}
+
+/* Menu */
+
+.navBar.open li .toolTip {
+    display: none;
+}
+
+.navBar.open input {
+    padding:  0px 20px 0px 50px;
+    width: 100%;
+}
+
+.navBar.open .bx-search {
+    width: 0;
+}
+
+.navBar.open li a .links {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Usuario */
+
+.navBar.open .usuario #salir {
+    width: 50px;
+    background: none;
+}
+
+.user img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.usuario .nombre,
+.usuario .trabajo {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.usuario .trabajo {
+    font-size: 12px;
+}
