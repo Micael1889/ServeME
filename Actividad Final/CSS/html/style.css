@@ -38,15 +38,24 @@ main {
 }
 
 .llamado:hover {
-  animation: moverSuave 200ms linear infinite alternate; /* Añadimos 'alternate' para un bucle suave */
+  animation: moverSuave 800ms linear infinite alternate;
 }
 
 @keyframes moverSuave {
-  0% {
-    transform: translateX(-5px); /* Empieza un poco a la izquierda */
+  0%,
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
   }
+  20%,
+  40%,
+  60%,
+  80%,
   100% {
-    transform: translateX(5px); /* Se mueve a la derecha */
+    transform: translateX(5px);
   }
 }
 
@@ -70,7 +79,8 @@ main {
   justify-content: space-around;
   background-color: var(--color-fondo-claro);
   text-align: center;
-  min-width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .descripcion-aviso {

@@ -32,8 +32,8 @@ const aviso = [
     srcIMG: "../IMG/pngwing.com.png",
   },
   {
-    titulo: " TRALALERO TRALALA",
-    descripcion: " MC poshhini",
+    titulo: " Happy Hour",
+    descripcion: " De 18hshs a 22hs",
     srcIMG: "../IMG/pngegg (1).png",
   },
   {
