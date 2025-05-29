@@ -246,16 +246,15 @@ for (let x = 0; x < cat.length; x++) {
       precioDivProd2.innerHTML = `<span>${menu[y].precio}</span>`;
       let imgDivProd = crearElemento("img");
       imgDivProd.setAttribute("src", menu[y].src);
-      imgDivProd.setAttribute("width", "40%");
       divProd2.appendChild(h3DivProd2);
       divProd2.appendChild(pDivProd2);
       divProd2.appendChild(precioDivProd2);
       divProd.appendChild(divProd2);
       divProd.appendChild(imgDivProd);
       contenedorSeccionCat.appendChild(divProd);
-      lista.appendChild(contenedorSeccionCat);
     }
   }
+  lista.appendChild(contenedorSeccionCat);
 }
 
 /* CREACION DE CATEGORIAS */
@@ -294,7 +293,6 @@ async function ElegirCategoria(event) {
         let imgDivProd = crearElemento("img");
         imgDivProd.setAttribute("src", menu[y].src);
         imgDivProd.setAttribute("alt", "");
-        imgDivProd.setAttribute("width", "40%");
         divProd2.appendChild(h3DivProd2);
         divProd2.appendChild(brDivProd);
         divProd2.appendChild(pDivProd2);

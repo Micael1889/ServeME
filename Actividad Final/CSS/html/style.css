@@ -1,5 +1,6 @@
 :root {
-  --color-fondo-claro: #ece1d8;
+  --color-primario: #262626;
+  --color-secundario: #ece1d8;
 }
 * {
   padding: 0%;
@@ -8,9 +9,21 @@
   color: #845f5f;
 }
 
-main {
-  width: auto;
-  height: auto;
+/* --------------------- ESTRUCTURAS ---------------------------------------*/
+
+body {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "main "
+    "footer";
+  min-height: 100vh;
+  padding-bottom: 70px;
+}
+
+header {
+  grid-area: header;
 }
 
 .nav-superior {
@@ -18,10 +31,8 @@ main {
   justify-content: space-around;
   align-items: center;
   background-color: rgb(0, 0, 0);
-  padding: 2px;
-  min-width: 100vw;
+  width: 100%;
 }
-
 .divIcono {
   display: flex;
   justify-content: right;
@@ -74,12 +85,44 @@ main {
   font-size: medium;
 }
 
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "avisos "
+    "categorias"
+    "productos";
+  min-height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0a0b0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #003753c5;
+  border-radius: 0.45rem;
+}
+
+/* --------------------- FIN ESTRUCTURAS ---------------------------------------*/
+/* ------------------------------- AVISOS ---------------------------------------*/
+
+.contenedor-avisos {
+  grid-area: avisos;
+}
+
 .contenedor-avisos {
   display: flex;
   justify-content: space-around;
   background-color: var(--color-fondo-claro);
   text-align: center;
-  min-width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .descripcion-aviso {
@@ -153,20 +196,15 @@ main {
     opacity: 0;
   }
 }
-.botones-desp {
-  display: flex;
-  justify-content: space-evenly;
-  bottom: 100%;
-}
+/* ---------------------FIN AVISOS ---------------------------------------*/
+/* ---------------------CATEGORIAS ---------------------------------------*/
 
 .contenedor-categorias {
   box-shadow: 0px 5px 10px #4e4040;
-  padding: 2%;
   display: flex;
   justify-content: space-evenly;
   border-top: solid rgb(104, 76, 7);
   border-bottom: solid rgb(104, 76, 7);
-  margin-bottom: 5%;
   flex-wrap: wrap;
 }
 
@@ -198,11 +236,29 @@ main {
   cursor: pointer;
 }
 
+/* ---------------------FIN CATEGORIAS ---------------------------------------*/
+
 .list-prod {
-  margin: 0% 10%;
+  grid-area: productos;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2%;
+  grid-template-columns: auto;
+  gap: 1%;
+  justify-content: center;
+  min-height: 100%;
+  padding: 5%;
+  margin-bottom: 100px;
+}
+
+.lista-categoria-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.lista-categoria-items :first-child {
+  grid-column: 1 / -1;
+}
+
+.titulo {
 }
 
 .item {
@@ -212,8 +268,7 @@ main {
   border-radius: 10px;
   justify-content: space-between;
   width: 100%;
-  height: 190px;
-  margin-bottom: 5%;
+  height: 180px;
 }
 
 .item:hover {
@@ -232,7 +287,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 0% 5% 0% 0%;
   text-align: center;
   align-items: center;
   overflow: hidden;
@@ -252,22 +306,34 @@ span {
   color: rgb(255, 255, 255);
 }
 
-img {
+.item img {
   border-radius: 10px;
   justify-self: center;
-  object-fit: fill;
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .nav-inferior {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   text-align: center;
   align-items: center;
   bottom: 0%;
   background-color: rgb(2, 2, 2);
-
   width: 100%;
+  height: 55px;
+  z-index: 1;
+}
+
+.nav-inferior > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e3e3e3;
+  font-size: 0.9em;
 }
 
 #cant {
@@ -276,8 +342,18 @@ img {
   left: 5px;
   background-color: red;
   border-radius: 50%;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.7em;
+  font-weight: bold;
+  z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
+footer {
+  grid-area: footer;
+  height: 75px;
+}
 /* ------------------------ HTML PANEL ------------------------------------  */
 
 .headerCont {
@@ -300,7 +376,6 @@ img {
   border: inset 5px;
   background-color: #099bae;
   text-align: center;
-  margin: 20px;
 }
 
 .divPrueba {
