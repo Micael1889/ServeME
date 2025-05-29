@@ -79,8 +79,7 @@ main {
   justify-content: space-around;
   background-color: var(--color-fondo-claro);
   text-align: center;
-  width: 100%;
-  overflow: hidden;
+  min-width: 100vw;
 }
 
 .descripcion-aviso {

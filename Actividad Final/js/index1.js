@@ -32,8 +32,8 @@ const aviso = [
     srcIMG: "../IMG/pngwing.com.png",
   },
   {
-    titulo: " TRALALERO TRALALA",
-    descripcion: " MC poshhini",
+    titulo: " Happy Hour",
+    descripcion: " De 18hshs a 22hs",
     srcIMG: "../IMG/pngegg (1).png",
   },
   {
@@ -57,27 +57,38 @@ async function addAvisosWithDelay() {
   while (true) {
     const currentAviso = aviso[x];
 
-    let divProd = crearElemento("div", "", "", "", "descripcion-aviso");
-    let h1divProd = crearElemento("h1", currentAviso.titulo, "", "");
-    let pdivProd = crearElemento("p", currentAviso.descripcion, "", "");
-    divProd.appendChild(h1divProd);
-    divProd.appendChild(pdivProd);
+    let divDesc = crearElemento(
+      "div",
+      "",
+      "",
+      "",
+      "descripcion-aviso desc-entrando"
+    ); // Añade 'desc-entrando' aquí
+    let h1Desc = crearElemento("h1", currentAviso.titulo, "", "");
+    let pDesc = crearElemento("p", currentAviso.descripcion, "", "");
+    divDesc.appendChild(h1Desc);
+    divDesc.appendChild(pDesc);
 
-    let imgen = crearElemento("img", "", "", "", "img-aviso");
-    imgen.setAttribute("src", currentAviso.srcIMG);
-    imgen.width = "150";
-    imgen.height = "150";
+    let imgElem = crearElemento("img", "", "", "", "img-aviso img-entrando"); // Añade 'img-entrando' aquí
+    imgElem.setAttribute("src", currentAviso.srcIMG);
+    imgElem.width = "150";
+    imgElem.height = "150";
 
-    contenedorAviso.appendChild(divProd);
-    contenedorAviso.appendChild(imgen);
-
-    await delay(2000);
-    await delay(3000);
-
-    divProd.classList.add("desc-saliendo");
-    imgen.classList.add("img-saliendo");
+    contenedorAviso.appendChild(divDesc);
+    contenedorAviso.appendChild(imgElem);
 
     await delay(1000);
+
+    divDesc.classList.remove("desc-entrando");
+    imgElem.classList.remove("img-entrando");
+
+    await delay(3000);
+
+    divDesc.classList.add("desc-saliendo");
+    imgElem.classList.add("img-saliendo");
+
+    await delay(1000);
+
     contenedorAviso.innerHTML = "";
 
     if (x === aviso.length - 1) {
@@ -216,8 +227,15 @@ for (let x = 0; x < menu.length; x++) {
 
 /* CREACION DE TITULOS CAT Y PRODUCTOS */
 for (let x = 0; x < cat.length; x++) {
-  tituloCat = crearElemento("h1", cat[x]);
-  lista.appendChild(tituloCat);
+  const contenedorSeccionCat = crearElemento(
+    "div",
+    "",
+    "",
+    "",
+    "lista-categoria-items"
+  );
+  tituloCat = crearElemento("h1", cat[x], "", "", "titulo");
+  contenedorSeccionCat.appendChild(tituloCat);
   for (let y = 0; y < menu.length; y++) {
     if (cat[x] == menu[y].categoria) {
       let divProd = crearElemento("div", "", "", "", "item");
@@ -234,10 +252,12 @@ for (let x = 0; x < cat.length; x++) {
       divProd2.appendChild(precioDivProd2);
       divProd.appendChild(divProd2);
       divProd.appendChild(imgDivProd);
-      lista.appendChild(divProd);
+      contenedorSeccionCat.appendChild(divProd);
+      lista.appendChild(contenedorSeccionCat);
     }
   }
 }
+
 /* CREACION DE CATEGORIAS */
 for (let x = 0; x < cat.length; x++) {
   let catProd = crearElemento("div", "", "", "", "categoria carousel__slide");
@@ -249,14 +269,18 @@ for (let x = 0; x < cat.length; x++) {
 /* FILTRO POR CATEGORIA */
 const categoriaElegida = document.getElementsByClassName("titulo-cat");
 async function ElegirCategoria(event) {
+  console.log(event.target.id);
   if (event.target.id !== "") {
     divProd = "";
-    lista.className = "salida";
+    lista.classList.remove("list-entrando");
+    lista.classList.add("list-saliendo");
     await delay(1000);
+    lista.classList.remove("list-saliendo");
+    lista.classList.add("list-entrando");
     while (lista.hasChildNodes()) {
       lista.removeChild(lista.firstChild);
     }
-    tituloCat = crearElemento("h1", event.target.id);
+    tituloCat = crearElemento("h1", event.target.id, "", "", "titulo");
     lista.appendChild(tituloCat);
     for (let y = 0; y < menu.length; y++) {
       if (event.target.id == menu[y].categoria) {
@@ -283,6 +307,7 @@ async function ElegirCategoria(event) {
   }
 }
 categorias.addEventListener("click", ElegirCategoria);
+
 /* FIN FILTRO POR CATEGORIA */
 /* -------------------------------- ALERTA MOZO ------------------------------------- */
 const llamadoMozo = document.querySelector(".llamado");
