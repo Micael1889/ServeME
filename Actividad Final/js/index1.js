@@ -227,8 +227,15 @@ for (let x = 0; x < menu.length; x++) {
 
 /* CREACION DE TITULOS CAT Y PRODUCTOS */
 for (let x = 0; x < cat.length; x++) {
+  const contenedorSeccionCat = crearElemento(
+    "div",
+    "",
+    "",
+    "",
+    "lista-categoria-items"
+  );
   tituloCat = crearElemento("h1", cat[x], "", "", "titulo");
-  lista.appendChild(tituloCat);
+  contenedorSeccionCat.appendChild(tituloCat);
   for (let y = 0; y < menu.length; y++) {
     if (cat[x] == menu[y].categoria) {
       let divProd = crearElemento("div", "", "", "", "item");
@@ -236,19 +243,20 @@ for (let x = 0; x < cat.length; x++) {
       let h3DivProd2 = crearElemento("h3", menu[y].nombre);
       let pDivProd2 = crearElemento("p", menu[y].descripcion, "", "", "desc");
       let precioDivProd2 = crearElemento("p", "", "", "", "precio");
-      precioDivProd2.innerHTML = `<span>${menu[y].precio}</span>`;
+      precioDivProd2.innerHTML = `$<span>${menu[y].precio}</span>`;
       let imgDivProd = crearElemento("img");
       imgDivProd.setAttribute("src", menu[y].src);
-      imgDivProd.setAttribute("width", "40%");
       divProd2.appendChild(h3DivProd2);
       divProd2.appendChild(pDivProd2);
       divProd2.appendChild(precioDivProd2);
       divProd.appendChild(divProd2);
       divProd.appendChild(imgDivProd);
-      lista.appendChild(divProd);
+      contenedorSeccionCat.appendChild(divProd);
     }
   }
+  lista.appendChild(contenedorSeccionCat);
 }
+
 /* CREACION DE CATEGORIAS */
 for (let x = 0; x < cat.length; x++) {
   let catProd = crearElemento("div", "", "", "", "categoria carousel__slide");
@@ -281,11 +289,10 @@ async function ElegirCategoria(event) {
         let brDivProd = crearElemento("br");
         let pDivProd2 = crearElemento("p", menu[y].descripcion, "", "", "desc");
         let precioDivProd2 = crearElemento("p", "", "", "", "precio");
-        precioDivProd2.innerHTML = `<span>${menu[y].precio}</span>`;
+        precioDivProd2.innerHTML = `$<span>${menu[y].precio}</span>`;
         let imgDivProd = crearElemento("img");
         imgDivProd.setAttribute("src", menu[y].src);
         imgDivProd.setAttribute("alt", "");
-        imgDivProd.setAttribute("width", "40%");
         divProd2.appendChild(h3DivProd2);
         divProd2.appendChild(brDivProd);
         divProd2.appendChild(pDivProd2);
@@ -318,7 +325,7 @@ llamadoMozo.addEventListener("click", alertaMozo);
 /* -------------------------------- ALERTA item agregado ------------------------------------- */
 const montoTotal = document.getElementById("montoTotal");
 var total = 0;
-montoTotal.textContent = total;
+montoTotal.innerHTML = `$${total}`;
 var cantProd = document.getElementById("cant");
 var totalProd = 0;
 cantProd.textContent = totalProd;
@@ -330,7 +337,7 @@ function suma_Prod(event) {
   precio = parseFloat(precio);
   total += precio;
   montoTotal.innerHTML = "";
-  montoTotal.innerHTML = total;
+  montoTotal.innerHTML = `$${total}`;
   totalProd += 1;
   cantProd.textContent = totalProd;
   Swal.fire({
