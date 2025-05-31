@@ -2,14 +2,14 @@ let divPrincipal = document.getElementById("div-input");
 let boton = document.getElementById(`botonEnvio`);
 let contador = 0;
 
-let contenidoIngreso = `<input type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
-            <input type="text" name="Contra" placeholder="      Ingrese la contrasena">`;
+let contenidoIngreso = `<input  class="input-datos" type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
+            <input class="input-datos" type="text" name="Contra" placeholder="      Ingrese la contrasena">`;
 
 let contenidoRegistro = `<input type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
-            <input type="text" name="Apellido" placeholder="      Ingrese el apellido">
-            <input type="email  " name="Email" placeholder="      Ingrese el Email">
-            <input type="text" name="Contrasena" placeholder="      Ingrese la contrasena">
-            <input type="text" name="Contrasena" placeholder="      Repite la contrasena">
+            <input class="input-datos" type="text" name="Apellido" placeholder="      Ingrese el apellido">
+            <input class="input-datos" type="email  " name="Email" placeholder="      Ingrese el Email">
+            <input class="input-datos" type="text" name="Contrasena" placeholder="      Ingrese la contrasena">
+            <input class="input-datos" type="text" name="Contrasena" placeholder="      Repite la contrasena">
            `;
 
 divPrincipal.innerHTML = contenidoIngreso;

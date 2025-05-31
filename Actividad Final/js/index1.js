@@ -243,7 +243,7 @@ for (let x = 0; x < cat.length; x++) {
       let h3DivProd2 = crearElemento("h3", menu[y].nombre);
       let pDivProd2 = crearElemento("p", menu[y].descripcion, "", "", "desc");
       let precioDivProd2 = crearElemento("p", "", "", "", "precio");
-      precioDivProd2.innerHTML = `$<span>${menu[y].precio}</span>`;
+      precioDivProd2.innerHTML = `$<span class = "precio-item ">${menu[y].precio}</span>`;
       let imgDivProd = crearElemento("img");
       imgDivProd.setAttribute("src", menu[y].src);
       divProd2.appendChild(h3DivProd2);
@@ -289,7 +289,7 @@ async function ElegirCategoria(event) {
         let brDivProd = crearElemento("br");
         let pDivProd2 = crearElemento("p", menu[y].descripcion, "", "", "desc");
         let precioDivProd2 = crearElemento("p", "", "", "", "precio");
-        precioDivProd2.innerHTML = `$<span>${menu[y].precio}</span>`;
+        precioDivProd2.innerHTML = `$<span class = "precio-item ">${menu[y].precio}</span>`;
         let imgDivProd = crearElemento("img");
         imgDivProd.setAttribute("src", menu[y].src);
         imgDivProd.setAttribute("alt", "");
