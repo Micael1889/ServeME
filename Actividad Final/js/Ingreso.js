@@ -2,14 +2,35 @@ let divPrincipal = document.getElementById("div-input");
 let boton = document.getElementById(`botonEnvio`);
 let contador = 0;
 
-let contenidoIngreso = `<input  class="input-datos" type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
-            <input class="input-datos" type="text" name="Contra" placeholder="      Ingrese la contrasena">`;
+let contenidoIngreso = `<div class="linea_input">
+                    <img  class="icon_input"  src="../IMG/agregar-usuario.png" alt=""><input class="input-registro" type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
+                </div>
+                
+                <div>
+                    <img  class="icon_input"  src="../IMG/ojo.png" alt="">                <input class="input-registro" type="password" name="Contra" placeholder="      Ingrese la contrasena">
 
-let contenidoRegistro = `<input type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
-            <input class="input-datos" type="text" name="Apellido" placeholder="      Ingrese el apellido">
-            <input class="input-datos" type="email  " name="Email" placeholder="      Ingrese el Email">
-            <input class="input-datos" type="text" name="Contrasena" placeholder="      Ingrese la contrasena">
-            <input class="input-datos" type="text" name="Contrasena" placeholder="      Repite la contrasena">
+
+                </div>`;
+
+let contenidoRegistro = `<div class="linea_input">
+                <img  class="icon_input"  src="../IMG/agregar-usuario.png" alt=""><input class="input-registro" type="text" name="Nombre" id=""  placeholder="      Ingrese el nombre">
+                </div>
+
+                <div class="linea_input">
+                    <img  class="icon_input"  src="../IMG/agregar-usuario.png" alt=""> <input class="input-registro" type="text" name="Apellido" placeholder="      Ingrese el apellido" >
+                </div>
+             
+                <div class="linea_input">
+                    <img  class="icon_input"  src="../IMG/email.png" alt=""><input class="input-registro" type="email  " name="Email" placeholder="      Ingrese el Email">
+                </div>
+               
+                <div class="linea_input">
+                    <img  class="icon_input"  src="../IMG/ojo.png" alt=""><input class="input-registro" type="password" name="Contrasena" placeholder="      Ingrese la contraseña">
+                </div>
+                
+                <div class="linea_input">
+                    <img  class="icon_input"  src="../IMG/ojo.png" alt=""><input class="input-registro" type="password" name="Contrasena" placeholder="      Repite la contraseña">
+                </div>
            `;
 
 divPrincipal.innerHTML = contenidoIngreso;
@@ -25,7 +46,7 @@ document.getElementById(`botonEnvio`).addEventListener(`click`, function () {
   } else {
     divPrincipal.innerHTML = ``;
     divPrincipal.innerHTML = contenidoIngreso;
-    boton.textContent = `Olvidaste la contrasena, o necesitas registratrte?`;
+    boton.textContent = `Olvidaste la contraseña, o necesitas registratrte?`;
     contador = 0;
   }
 });

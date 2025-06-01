@@ -27,6 +27,7 @@
     "main "
     "footer";
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .carta-header {
@@ -344,6 +345,11 @@
   padding: 0.5%;
 }
 
+.boton-inferior a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .boton-inferior:hover {
   background-color: #262626;
   border-radius: 0.325rem;
@@ -377,43 +383,53 @@
 
 /* -------------------------------------------- PAGINA INGRESO O REGISTRO ---------------------------------------------------------------------- */
 
-.pagina {
+.body-registro {
   background-color: var(--color4);
+  background-image: url("../IMG/fondo-registro.jpg");
+  background-size: cover;
 }
 
 .contenido {
   align-items: center;
   display: flex;
   flex-direction: column;
-  border: solid var(--color1) 2px;
-  border-radius: 20px;
 }
 
-.icono {
+.icono-registro {
   justify-content: center;
   width: 300px;
-  margin-bottom: 30px;
 }
 
 .contenedorImagen {
   text-align: center;
 }
 
-.input-datos {
+.boton-registro:hover {
+  background-color: #817c7c;
+}
+
+.icon_input {
+  position: absolute;
+  width: 25px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.input-registro {
   width: 250px;
   height: 40px;
-  background-color: var(--color4);
-  margin-top: 10px;
+  padding-left: 35px;
+  background-color: white;
+  margin-top: 5px;
   border: 2px solid var(--color1);
   border-radius: 20px;
 }
-.boton {
+.boton-registro {
   padding: 7px;
   border-radius: 10px;
   text-align: center;
   margin-top: 20px;
-  width: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .inputs {
@@ -424,16 +440,24 @@
 .iconoEnvio {
   width: 40px;
   height: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .registro {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 20px;
-  color: var(--color2);
+  color: white;
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .registro:hover {
   text-decoration: underline;
+}
+
+.titulo {
+  color: var(--color1);
 }
 
 @media (max-width: 600px) {
@@ -442,6 +466,7 @@
     height: 100%;
   }
 }
+
 /* -------------------------------------------- FIN PAGINA INGRESO O REGISTRO ---------------------------------------------------------------------- */
 /* -------------------------------------------- FIN PANEL ADMIN ---------------------------------------------------------------------- */
 
@@ -730,4 +755,120 @@
 
 .usuario .trabajo {
   font-size: 12px;
+}
+
+#contenidoPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.divForm {
+  display: flex;
+  flex-direction: column;
+  background-color: #262626;
+  border: solid 2px magenta;
+  border-radius: 0.325rem;
+  padding: 2%;
+}
+
+.titulazo {
+  text-align: center;
+  color: #ffffff;
+}
+
+.input-productos {
+  margin: 2%;
+  border-radius: 0.325rem;
+}
+
+/* --------------------------------------------- CARRITO -------------------------------------------------------------------- */
+
+.carrito-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.header-carrito {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.carrito {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.carrito .titulo-carrito {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.producto .img-carrito {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.detalle-producto {
+  flex: 1;
+}
+
+.detalle-producto p {
+  margin: 0.2rem 0;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controles button {
+  padding: 5px 10px;
+  background-color: #ededed;
+  border: 1px solid #18cc00;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.subtotal {
+  text-align: right;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.confirmar {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #1a4d38;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
 }
