@@ -131,7 +131,6 @@
   text-align: center;
   width: 100%;
   overflow: hidden;
-
 }
 
 .descripcion-aviso {
@@ -317,16 +316,14 @@
   color: rgb(255, 255, 255);
 }
 
-.item figure{
-    overflow: hidden;
+.item figure {
+  overflow: hidden;
 }
 
 .item:hover {
-    transform: scale(1.02);
-    background-color: #cecece;
-   
+  transform: scale(1.02);
+  background-color: #cecece;
 }
-
 
 .item img {
   border-radius: 10px;
@@ -484,12 +481,12 @@
     height: 100%;
   }
 }
-.copyIngreso{
+.copyIngreso {
   text-align: center;
   justify-content: center;
   width: 100%;
   color: #a4a4a4;
-  }
+}
 
 /* -------------------------------------------- FIN PAGINA INGRESO O REGISTRO ---------------------------------------------------------------------- */
 /* -------------------------------------------- FIN PANEL ADMIN ---------------------------------------------------------------------- */
