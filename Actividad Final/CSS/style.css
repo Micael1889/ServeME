@@ -3,9 +3,9 @@
 :root {
   --color-primario: #262626;
   --color-secundario: #ece1d8;
-  --color1: #f2f6d0;
-  --color2: #efdcab;
-  --color3: #d98324;
+  --color1: #232323;
+  --color2: #efc3ab;
+  --color3: #7d460c;
   --color4: #443627;
   --color-primary: #000;
   --color-dark: #1b1b1d;
@@ -131,6 +131,7 @@
   text-align: center;
   width: 100%;
   overflow: hidden;
+
 }
 
 .descripcion-aviso {
@@ -211,29 +212,30 @@
   box-shadow: 0px 5px 10px #4e4040;
   display: flex;
   justify-content: space-evenly;
-  border-top: solid rgb(104, 76, 7);
-  border-bottom: solid rgb(104, 76, 7);
+  border-top: solid rgb(130, 130, 130);
+  border-bottom: solid rgb(142, 142, 142);
   flex-wrap: wrap;
-  padding: 2%;
+  padding: 0.1%;
 }
 
 .categoria {
   text-align: center;
   font-size: 15px;
-  background-color: #e2dcdc;
+  background-color: #d7d7d7;
   border-radius: 1rem;
   padding: 1%;
-  margin-block: 2%;
+  margin-block: 1%;
 }
 
 .categoria:hover,
 .boton:hover {
-  background-color: #cdc8c8;
+  background-color: #7a7a7a;
+  color: #f7f7f7;
 }
 
 .categoria:after,
 .boton:after {
-  background-color: #5c5353;
+  background-color: #5a5858;
 }
 
 .categoria:active,
@@ -276,7 +278,7 @@
 .item {
   display: flex;
   cursor: pointer;
-  border: 2px solid rgb(192, 192, 192);
+  border: 2px solid rgb(215, 215, 215);
   border-radius: 10px;
   justify-content: space-between;
   width: 100%;
@@ -284,11 +286,11 @@
 }
 
 .item:hover {
-  box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px #e8e8e8;
   border-radius: 10px;
 }
 .item:active {
-  box-shadow: inset 0px 0px 10px #000000;
+  box-shadow: inset 0px 0px 10px #c9c8c8;
 }
 
 .info-imp {
@@ -298,12 +300,13 @@
   text-align: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
 }
 
 .precio {
-  background-color: rgb(104, 76, 7);
+  background-color: rgb(81, 81, 81);
   width: 50%;
-  box-shadow: 0px 0px 10px rgb(104, 76, 7);
+  box-shadow: 0px 0px 10px rgb(160, 160, 160);
   border-radius: 0.325rem;
   font-weight: bolder;
   font-size: large;
@@ -313,6 +316,17 @@
 .precio-item {
   color: rgb(255, 255, 255);
 }
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    background-color: #cecece;
+   
+}
+
 
 .item img {
   border-radius: 10px;
@@ -331,7 +345,7 @@
   bottom: 0%;
   background-color: rgb(2, 2, 2);
   width: 100%;
-  height: 65px;
+  height: 80px;
   z-index: 1;
 }
 
@@ -370,7 +384,7 @@
 }
 
 #montoTotal {
-  color: #d98324;
+  color: #f0f0f0;
 }
 
 .carta-footer {
@@ -393,11 +407,15 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 90vh;
 }
 
 .icono-registro {
   justify-content: center;
-  width: 300px;
+  width: 250px;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 .contenedorImagen {
@@ -466,6 +484,12 @@
     height: 100%;
   }
 }
+.copyIngreso{
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  color: #a4a4a4;
+  }
 
 /* -------------------------------------------- FIN PAGINA INGRESO O REGISTRO ---------------------------------------------------------------------- */
 /* -------------------------------------------- FIN PANEL ADMIN ---------------------------------------------------------------------- */
