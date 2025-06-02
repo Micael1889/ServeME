@@ -104,17 +104,35 @@ addAvisosWithDelay();
 const menu = [
   {
     nombre: "Milanesa Napolitana con Papas Fritas",
-    precio: 650.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    precio: 17500,
+    src: "https://estacionpalero.com.ar/wp-content/uploads/2024/10/Milanesa-Napo.webp",
     descripcion:
       "Clásica milanesa de ternera cubierta con salsa de tomate, jamón y mozzarella gratinada. Acompañada de crujientes papas fritas.",
     categoria: "Plato Principal",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
   {
-    nombre: "Ravioles de Ricota y Espinaca con Salsa Boloñesa",
-    precio: 580.5,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "Milanesa a Caballo con Papas Fritas",
+    precio: 17500,
+    src: "https://cdn.pedix.app/f7I4XPw3D6tzRO98Wiiy/products/1720187327272-84829.png?size=800x800",
+    descripcion:
+      "Clásica milanesa de ternera con dos huevo a caballo, Acompañada de crujientes papas fritas.",
+    categoria: "Plato Principal",
+    srcBackground: "../IMG/cat_hamb.jpg",
+  },
+  {
+    nombre: "Ravioles de Ricota y Espinaca con Salsa",
+    precio: 8200,
+    src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhng2qC8Yq1hRjZxdly212oTIee2_E9gpMIeNjWzK9rZPntS2xFnBCzR_HV_-Y3G5anJoPmkOEYgkUpkFh36f-77x4F4o9yJbQww2qrm0Yi48HDBowZ3BbI4t4kuv4JD2OypljRas6tPNd3/s1600/DSC08998.JPG",
+    descripcion:
+      "Ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa casera.",
+    categoria: "Pastas",
+    srcBackground: "../IMG/cat_hamb.jpg",
+  },
+  {
+    nombre: "Ravioles de Carne y Verdura con salsa casera",
+    precio: 8200,
+    src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhng2qC8Yq1hRjZxdly212oTIee2_E9gpMIeNjWzK9rZPntS2xFnBCzR_HV_-Y3G5anJoPmkOEYgkUpkFh36f-77x4F4o9yJbQww2qrm0Yi48HDBowZ3BbI4t4kuv4JD2OypljRas6tPNd3/s1600/DSC08998.JPG",
     descripcion:
       "Delicados ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa boloñesa casera.",
     categoria: "Pastas",
@@ -122,310 +140,109 @@ const menu = [
   },
   {
     nombre: "Ensalada Caesar con Pollo Grillado",
-    precio: 490.75,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    precio: 10000,
+    src: "https://ensaladacesar.info/img/ensalada-cesar-con-bacon-y-pollo-901.jpg",
     descripcion:
       "Fresca ensalada con hojas de lechuga romana, croutons, queso parmesano y aderezo Caesar. Coronada con tiritas de pollo grillado.",
     categoria: "Ensaladas",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
   {
-    nombre: "Hamburguesa Clásica con Queso Cheddar",
-    precio: 520.9,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "Ensalada de Arroz y Atun",
+    precio: 10700,
+    src: "https://resizer.glanacion.com/resizer/v2/arroz-con-QBUV6I5STJFHNIAMPE37EHGE2M.JPG?auth=460a1971bc9faf167e1ca82ca407bac327493cba2f3d93f16d2a56f54b8ff4c1&width=1200&height=800&quality=70&smart=true",
+    descripcion:
+      "Fresca ensalada con arroz, atun, choclo, huevo y tomate",
+    categoria: "Ensaladas",
+    srcBackground: "../IMG/cat_hamb.jpg",
+  },
+
+  {
+    nombre: "Hamburguesa Clasica con Queso Cheddar",
+    precio: 6900,
+    src: "https://deananddennys.com/stage/contenidos/1612363992.jpg",
+    descripcion:
+      "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
+    categoria: "Hamburguesas",
+    srcBackground: "../IMG/cat_hamb.jpg",
+  },
+{
+    nombre: "Hamburguesa Clásica Doble con Queso Cheddar",
+    precio: 8500,
+    src: "https://static.wixstatic.com/media/29cc8e_aaad1f9b690b4176a0cef213b971f787~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/29cc8e_aaad1f9b690b4176a0cef213b971f787~mv2.jpg",
     descripcion:
       "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
     categoria: "Hamburguesas",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
   {
+    nombre: "Pizza Muzzarella",
+    precio: 13000,
+    src: "https://breaders.com.ar/web/wp-content/uploads/2022/01/pizzas-muzzarella.jpg",
+    descripcion:
+      "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca ",
+    categoria: "pizzas",
+    srcBackground: "../IMG/cat_hamb.jpg",
+  },
+
+  {
     nombre: "Pizza Margarita",
-    precio: 480.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    precio: 13000,
+    src: "https://preppykitchen.com/wp-content/uploads/2024/01/Margherita-Pizza-Recipe-Card-500x500.jpg",
     descripcion:
       "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca y hojas de albahaca.",
     categoria: "pizzas",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
+
   {
-    nombre: "Tarta de Manzana con Helado de Vainilla",
-    precio: 350.25,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "Helado de Una Bocha",
+    precio: 1500,
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LxSOZVLcBPIm7yL7mifud7NRL_NHOcPh6nHSdHSR_WWR_9Yt1PrwAh046vL8ok84Py4&usqp=CAU",
     descripcion:
-      "Clásica tarta de manzana tibia, acompañada de una bocha de helado cremoso de vainilla.",
+      "Gusto a eleccion: Frutilla, Chocolate, Limon, Vainilla y Dulce de leche",
     categoria: "Postres",
     srcBackground: "../IMG/cat_pizza.jpg",
   },
+  
   {
-    nombre: "Milanesa Napolitana con Papas Fritas",
-    precio: 650.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "Helado de Dos Bochas",
+    precio: 2000,
+    src: "https://tastyrails.com.ar/wp-content/uploads/2024/01/conos-combinados.jpg",
     descripcion:
-      "Clásica milanesa de ternera cubierta con salsa de tomate, jamón y mozzarella gratinada. Acompañada de crujientes papas fritas.",
-    categoria: "Plato Principal",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ravioles de Ricota y Espinaca con Salsa Boloñesa",
-    precio: 580.5,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Delicados ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa boloñesa casera.",
-    categoria: "Pastas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ensalada Caesar con Pollo Grillado",
-    precio: 490.75,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Fresca ensalada con hojas de lechuga romana, croutons, queso parmesano y aderezo Caesar. Coronada con tiritas de pollo grillado.",
-    categoria: "Ensaladas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Hamburguesa Clásica con Queso Cheddar",
-    precio: 520.9,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
-    categoria: "tun tun sahur",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Pizza Margarita",
-    precio: 480.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca y hojas de albahaca.",
-    categoria: "bombardino",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Tarta de Manzana con Helado de Vainilla",
-    precio: 350.25,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica tarta de manzana tibia, acompañada de una bocha de helado cremoso de vainilla.",
-    categoria: "tralalero",
-    srcBackground: "../IMG/cat_pizza.jpg",
-  },
-  {
-    nombre: "Milanesa Napolitana con Papas Fritas",
-    precio: 650.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica milanesa de ternera cubierta con salsa de tomate, jamón y mozzarella gratinada. Acompañada de crujientes papas fritas.",
-    categoria: "Plato Principal",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ravioles de Ricota y Espinaca con Salsa Boloñesa",
-    precio: 580.5,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Delicados ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa boloñesa casera.",
-    categoria: "Pastas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ensalada Caesar con Pollo Grillado",
-    precio: 490.75,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Fresca ensalada con hojas de lechuga romana, croutons, queso parmesano y aderezo Caesar. Coronada con tiritas de pollo grillado.",
-    categoria: "Ensaladas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Hamburguesa Clásica con Queso Cheddar",
-    precio: 520.9,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
-    categoria: "Hamburguesas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Pizza Margarita",
-    precio: 480.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca y hojas de albahaca.",
-    categoria: "pizzas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Tarta de Manzana con Helado de Vainilla",
-    precio: 350.25,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica tarta de manzana tibia, acompañada de una bocha de helado cremoso de vainilla.",
+      "Dos gustos a eleccion: Frutilla, Chocolate, Limon, Vainilla y Dulce de leche",
     categoria: "Postres",
     srcBackground: "../IMG/cat_pizza.jpg",
   },
+
   {
-    nombre: "Milanesa Napolitana con Papas Fritas",
-    precio: 650.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "CocaCola",
+    precio: 900,
+    src: "https://acdn-us.mitiendanube.com/stores/861/458/products/340341-3359c763f08b338b2b15680466868435-1024-1024.jpg",
     descripcion:
-      "Clásica milanesa de ternera cubierta con salsa de tomate, jamón y mozzarella gratinada. Acompañada de crujientes papas fritas.",
-    categoria: "Plato Principal",
+      "Lata de CocaCola 350 ml",
+    categoria: "Bebidas",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
   {
-    nombre: "Ravioles de Ricota y Espinaca con Salsa Boloñesa",
-    precio: 580.5,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "Sprite",
+    precio: 900,
+    src: "https://jumboargentina.vtexassets.com/arquivos/ids/791795/Gaseosa-Sprite-Lima-lim-n-354-Ml-2-11040.jpg?v=638291793644700000",
     descripcion:
-      "Delicados ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa boloñesa casera.",
-    categoria: "Pastas",
+      "Lata de Sprite 350 ml",
+    categoria: "Bebidas",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
   {
-    nombre: "Ensalada Caesar con Pollo Grillado",
-    precio: 490.75,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    nombre: "Agua sin Gas",
+    precio: 1100,
+    src: "https://acdn-us.mitiendanube.com/stores/798/865/products/48146782-8488201d17fe506c1f16639330522874-1024-1024.jpg",
     descripcion:
-      "Fresca ensalada con hojas de lechuga romana, croutons, queso parmesano y aderezo Caesar. Coronada con tiritas de pollo grillado.",
-    categoria: "Ensaladas",
+      "Botellita de Agua sin Gas 500 ml",
+    categoria: "Bebidas",
     srcBackground: "../IMG/cat_hamb.jpg",
   },
-  {
-    nombre: "Hamburguesa Clásica con Queso Cheddar",
-    precio: 520.9,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
-    categoria: "tun tun sahur",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Pizza Margarita",
-    precio: 480.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca y hojas de albahaca.",
-    categoria: "bombardino",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Tarta de Manzana con Helado de Vainilla",
-    precio: 350.25,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica tarta de manzana tibia, acompañada de una bocha de helado cremoso de vainilla.",
-    categoria: "tralalero",
-    srcBackground: "../IMG/cat_pizza.jpg",
-  },
-  {
-    nombre: "Milanesa Napolitana con Papas Fritas",
-    precio: 650.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica milanesa de ternera cubierta con salsa de tomate, jamón y mozzarella gratinada. Acompañada de crujientes papas fritas.",
-    categoria: "Plato Principal",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ravioles de Ricota y Espinaca con Salsa Boloñesa",
-    precio: 580.5,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Delicados ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa boloñesa casera.",
-    categoria: "Pastas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ensalada Caesar con Pollo Grillado",
-    precio: 490.75,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Fresca ensalada con hojas de lechuga romana, croutons, queso parmesano y aderezo Caesar. Coronada con tiritas de pollo grillado.",
-    categoria: "Ensaladas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Hamburguesa Clásica con Queso Cheddar",
-    precio: 520.9,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
-    categoria: "Hamburguesas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Pizza Margarita",
-    precio: 480.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca y hojas de albahaca.",
-    categoria: "pizzas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Tarta de Manzana con Helado de Vainilla",
-    precio: 350.25,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica tarta de manzana tibia, acompañada de una bocha de helado cremoso de vainilla.",
-    categoria: "Postres",
-    srcBackground: "../IMG/cat_pizza.jpg",
-  },
-  {
-    nombre: "Milanesa Napolitana con Papas Fritas",
-    precio: 650.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica milanesa de ternera cubierta con salsa de tomate, jamón y mozzarella gratinada. Acompañada de crujientes papas fritas.",
-    categoria: "Plato Principal",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ravioles de Ricota y Espinaca con Salsa Boloñesa",
-    precio: 580.5,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Delicados ravioles rellenos de ricota y espinaca, bañados en una sabrosa salsa boloñesa casera.",
-    categoria: "Pastas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Ensalada Caesar con Pollo Grillado",
-    precio: 490.75,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Fresca ensalada con hojas de lechuga romana, croutons, queso parmesano y aderezo Caesar. Coronada con tiritas de pollo grillado.",
-    categoria: "Ensaladas",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Hamburguesa Clásica con Queso Cheddar",
-    precio: 520.9,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Jugosa hamburguesa de carne vacuna con queso cheddar fundido, lechuga, tomate y cebolla en pan brioche. Se sirve con papas rústicas.",
-    categoria: "tun tun sahur",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Pizza Margarita",
-    precio: 480.0,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Sencilla y deliciosa pizza con salsa de tomate, mozzarella fresca y hojas de albahaca.",
-    categoria: "bombardino",
-    srcBackground: "../IMG/cat_hamb.jpg",
-  },
-  {
-    nombre: "Tarta de Manzana con Helado de Vainilla",
-    precio: 350.25,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
-    descripcion:
-      "Clásica tarta de manzana tibia, acompañada de una bocha de helado cremoso de vainilla.",
-    categoria: "tralalero",
-    srcBackground: "../IMG/cat_pizza.jpg",
-  },
+  
 ];
 /* Fin Productos */
 
@@ -559,9 +376,9 @@ function suma_Prod(event) {
   Swal.fire({
     position: "center",
     icon: "success",
-    title: `Item ${nombre} agregado al carrito `,
+    title: `${nombre} agregado al carrito `,
     showConfirmButton: false,
-    timer: 1500,
+    timer: 800,
   });
 }
 lista.addEventListener("click", suma_Prod);
