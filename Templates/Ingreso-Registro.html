@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServerMe</title>
+    <link rel="stylesheet" href="../static/Css/style.css">
+    <style>
+        /* --- ESTILOS PARA LOS MENSAJES FLASH --- */
+        .flashes {
+            list-style: none; /* Quita los puntos de la lista */
+            padding: 10px 15px;
+            margin: 10px auto; /* Centra el bloque de mensajes si el padre lo permite */
+            width: fit-content; /* Ajusta el ancho al contenido */
+            max-width: 90%; /* Limita el ancho máximo */
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .flashes li {
+            padding: 5px 0;
+            margin: 0;
+        }
+        .flashes .success {
+            background-color: #d4edda; /* Verde claro */
+            color: #155724; /* Verde oscuro */
+            border: 1px solid #c3e6cb;
+        }
+        .flashes .error {
+            background-color: #f8d7da; /* Rojo claro */
+            color: #721c24; /* Rojo oscuro */
+            border: 1px solid #f5c6cb;
+        }
+        .flashes .warning {
+            background-color: #fff3cd; /* Amarillo claro */
+            color: #856404; /* Amarillo oscuro */
+            border: 1px solid #ffeeba;
+        }
+        /* --- FIN ESTILOS PARA LOS MENSAJES FLASH --- */
+    </style>
+</head>
+<body class="body-registro">
+    <div class="contenido">
+        <div class="contenedorImagen">
+            <img class="icono-registro" src="../static/img/iconazo.png" alt="Icono del negocio">
+        </div>
+        
+        <div class="inputs" id="div-input">
+            </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <a class="registro" id="botonEnvio">¿Olvidaste la contraseña o necesitas registrarte?</a>
+    </div>
+
+    <footer class="copyIngreso"> &copy; 2025 MIAGUMACK o ServeMe. Todos los derechos reservados.</footer>
+
+    <script src="../static/Js/Ingreso.js"></script>
+</body>
+</html>
